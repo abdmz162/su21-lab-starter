@@ -8,15 +8,7 @@ int ll_has_cycle(node *head) {
     node *slow = head;
     node *fast = head;
     fast = fast->next;
-    // if(fast == NULL) {
-    //     return 0; // No cycle if fast pointer reaches the end
-    // }else{
-    //     fast=fast->next;
-    //     if(fast==NULL){
-    //         return 0;
-    //     }
-    // }
-    // slow=slow->next;
+
     while(slow != NULL && fast != NULL) {
         if(slow == fast) {
             return 1; // Cycle detected
